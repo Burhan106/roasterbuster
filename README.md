@@ -1,3 +1,4 @@
 # roasterbuster
 
-![Screenshot](screenshot.png)
+
+<img src="screenshot.png" height="500"/>
