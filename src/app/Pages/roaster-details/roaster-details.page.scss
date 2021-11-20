@@ -1,0 +1,19 @@
+ion-card{
+    padding: 10px;
+    color: black;
+
+    ion-card-title{
+        text-align: center;
+        color: black;
+        border-bottom: 1px solid #d7d8da;
+        padding: 10px;
+    }
+
+    ion-card-content{
+        font-size: 18px;
+        line-height: 2;
+        b{
+            font-weight: 500;
+        }
+    }
+}

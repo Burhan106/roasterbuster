@@ -1,0 +1,17 @@
+<ion-item *ngIf="roaster" (click)="openDetail()" [detail]="false">
+  <ion-icon slot="start" name="airplane" *ngIf="roaster.DutyID == 'FLT' || roaster.DutyID == 'POS'"></ion-icon>
+  <ion-icon slot="start" name="briefcase" *ngIf="roaster.DutyID == 'OFD'"></ion-icon>
+  <ion-icon slot="start" name="hourglass" *ngIf="roaster.DutyID == 'SBY'"></ion-icon>
+  <ion-icon slot="start" name="power-sharp" *ngIf="roaster.DutyID == 'DO'"></ion-icon>
+  
+  <ion-label class="ion-text-wrap">
+    <h2 *ngIf="roaster.DutyID == 'FLT'">{{ roaster.Departure }}-{{ roaster.Destination }}</h2>
+    <h2 *ngIf="roaster.DutyID != 'FLT'">{{roaster.DutyCode}}</h2>
+    <h3>
+      {{roaster.DutyID != 'FLT' ?  roaster.Departure : '' }}
+      <span class="time">
+        {{ roaster.Time_Depart }} - {{ roaster.Time_Arrive }}
+      </span>
+    </h3>
+  </ion-label>
+</ion-item>

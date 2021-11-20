@@ -1,0 +1,32 @@
+ion-item {
+    --padding-start: 15px;
+    --inner-padding-end: 10px;
+  }
+  
+  ion-label {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  
+  ion-item h2 {
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  ion-item p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 95%;
+  }
+  
+  ion-item .time {
+    color: #c71028;
+    float: right;
+  }
+  
+  ion-item ion-icon {
+    color: black;   
+    font-size: 2em;
+  } 
+  

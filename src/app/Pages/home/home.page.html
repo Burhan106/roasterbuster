@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Roster Buster
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <ion-list>
+    <ng-container *ngFor="let roaster of roasterList;let i = index">
+      <ion-item class="date-head" *ngIf="i== 0 || roasterList[i].Date != roasterList[i-1].Date">{{utils.parseDate(roaster.Date)}}</ion-item>
+      <app-roaster [roaster]="roaster"></app-roaster>
+    </ng-container>
+  </ion-list>
+</ion-content>

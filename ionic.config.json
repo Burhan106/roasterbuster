@@ -1,0 +1,7 @@
+{
+  "name": "RosterBuster",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

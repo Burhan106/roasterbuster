@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-title>{{roaster.DutyCode}}</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="roaster">
+  <ion-card>
+    <ion-card-title *ngIf="roaster.DutyID == 'FLT' || roaster.DutyID == 'POS'">{{roaster.Departure+' - '+roaster.Destination}}</ion-card-title>
+    <ion-card-title *ngIf="roaster.DutyID != 'FLT' && roaster.DutyID != 'POS'">{{roaster.Departure}}</ion-card-title>
+    <ion-card-content>
+      <b>Aircraft Type</b> {{roaster['Aircraft Type']}}<br>
+      <b>Captain</b> {{roaster.Captain}}<br>
+      <b>Date</b> {{utils.parseDate(roaster.Date)}}<br>
+      <b>Time</b> {{roaster.Time_Depart}} - {{roaster.Time_Arrive}}<br>
+      <b>First Officer</b> {{roaster['First Officer']}}<br>
+      <b>Flight Attendant</b>  {{roaster['Flight Attendant']}}<br>
+      <b>Flight No.</b>  {{roaster.Flightnr}}<br>
+      <b>Tail</b> {{roaster.Tail}}<br>
+    </ion-card-content>
+  </ion-card>
+
+
+  <div class="ion-padding">
+
+
+
+  </div>
+
+</ion-content>
